@@ -2,11 +2,11 @@ spring:
   cloud:
     compatibility-verifier:
       enabled : false
-  management:
-    endpoints:
-      web:
-        exposure:
-          include: "*"
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
   datasource:
     url: jdbc:postgresql://localhost:5432/gearhead_product
     username: account
