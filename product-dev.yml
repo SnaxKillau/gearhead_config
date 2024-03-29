@@ -7,6 +7,9 @@ management:
     web:
       exposure:
         include: "*"
+  info:
+    env:
+      enabled: true
   datasource:
     url: jdbc:postgresql://localhost:5432/gearhead_product
     username: account
@@ -34,7 +37,3 @@ info:
     name: GearHead Online SHop
     description: This project is about online shop with micorservice
     version: 1.0.0
-management:
-  info:
-    env: 
-      enabled: true
