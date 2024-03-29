@@ -37,4 +37,4 @@ info:
 management:
   info:
     env: 
-      enable: true
+      enabled: true
