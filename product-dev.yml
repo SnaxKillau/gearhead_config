@@ -1,4 +1,12 @@
 spring:
+  cloud:
+    compatibility-verifier:
+      enabled : false
+  management:
+    endpoints:
+      web:
+        exposure:
+          include: "*"
   datasource:
     url: jdbc:postgresql://localhost:5432/gearhead_product
     username: account
@@ -12,3 +20,11 @@ spring:
 springdoc:
   api-docs:
     path: /api-docs
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:9000/eureka/
