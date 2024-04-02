@@ -1,0 +1,36 @@
+server:
+  port: 8072
+spring:
+  cloud:
+    compatibility-verifier:
+      enabled : false
+    gateway:
+      dicovery:
+        lacator:
+          enable: true
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:9000/eureka/
+# acturator info endpoint
+info:
+  app:
+    name: GearHead Online SHop
+    description: This project is about online shop with micorservice
+    version: 1.0.0
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      endpoint:
+        gateway:
+          enable: true
+          
+  info:
+    env:
+      enabled: true
