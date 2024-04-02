@@ -1,13 +1,15 @@
 server:
   port: 8072
+
 spring:
   cloud:
     compatibility-verifier:
-      enabled : false
+      enabled: false
     gateway:
-      dicovery:
-        lacator:
+      discovery:
+        locator:
           enabled: true
+
 eureka:
   instance:
     preferIpAddress: true
@@ -16,21 +18,26 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://localhost:9000/eureka/
-# acturator info endpoint
+
 info:
   app:
     name: GearHead Online SHop
-    description: This project is about online shop with micorservice
+    description: This project is about an online shop with microservices
     version: 1.0.0
+  management:
+    endpoints:
+      web:
+        exposure:
+          include: "*"
+  env:
+    enabled: true
+
 management:
   endpoints:
     web:
       exposure:
         include: "*"
-      endpoint:
-        gateway:
-          enabled: true
-          
+
   info:
-    env:
+    gateway:
       enabled: true
