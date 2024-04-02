@@ -7,7 +7,7 @@ spring:
     gateway:
       dicovery:
         lacator:
-          enable: true
+          enabled: true
 eureka:
   instance:
     preferIpAddress: true
@@ -29,7 +29,7 @@ management:
         include: "*"
       endpoint:
         gateway:
-          enable: true
+          enabled: true
           
   info:
     env:
